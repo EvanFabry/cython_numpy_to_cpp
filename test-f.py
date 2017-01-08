@@ -8,7 +8,7 @@ N = 30
 a = np.arange(N, dtype=np.float64)
 
 out = func.fpy_1d(a)
-print ("fpy_1d -> fc z:", out)
+print ("fpy_1d -> fc z:\n", out, "\n")
 
 out = func.fpy_2d(a.reshape((N // 2, 2)))
-print ("fpy_2d -> fc z:", out)
+print ("fpy_2d -> fc z:\n", out, "\n")

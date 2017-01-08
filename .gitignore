@@ -1,0 +1,4 @@
+func.cpp
+build/*
+build
+*.so

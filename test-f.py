@@ -5,8 +5,10 @@ import numpy as np
 import func  # loads f.so from cc-lib: f.pyx -> f.c + fc.o -> f.so
 
 N = 30
-a = np.arange( N, dtype=np.float64 )
-z = np.ones( N, dtype=np.float64 ) * np.NaN
+a = np.arange(N, dtype=np.float64)
 
-fret = func.fpy( N, a, z )
-print ("fpy -> fc z:", z)
+out = func.fpy_1d(a)
+print ("fpy_1d -> fc z:", out)
+
+out = func.fpy_2d(a.reshape((N // 2, 2)))
+print ("fpy_2d -> fc z:", out)
